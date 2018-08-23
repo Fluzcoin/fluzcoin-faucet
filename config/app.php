@@ -211,4 +211,11 @@ return [
 
     ],
 
+
+    'settings' => [
+        'provider_url' => env('PROVIDER_URL', 'https://node.fluzcoin.io'),
+        'sender_pubkey' => env('SENDER_PUBKEY', ''),
+        'sender_privkey' => env('SENDER_PRIVKEY', ''),
+        'faucet_value' => env('FACUET_VALUE', 1000),
+    ]
 ];

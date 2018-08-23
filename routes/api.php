@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['namespace' => 'Api'], function () {
+Route::group(['namespace' => 'Api', 'middleware' => 'throttle:200,1'], function () {
     Route::get('/faucet/{address}', 'ApiController@faucet');
 });
 
